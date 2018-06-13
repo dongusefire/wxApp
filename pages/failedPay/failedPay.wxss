@@ -1,0 +1,47 @@
+page {
+  background-color: #fafafa;
+  position: relative
+}
+.bi_o{
+  background-color: #fff;
+  padding-bottom:32rpx;
+  border-bottom: 1px solid #dcdcdc;
+}
+.icon  {
+  text-align: center;
+  padding: 34rpx 0 60rpx 0;
+ 
+}
+.icon image {
+  width:110rpx;
+}
+.icon .msg {
+  text-align: center;
+  color:#333333;
+  font-size: 48rpx;
+}
+.prompt .title {
+  padding-left:34rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.prompt .content {
+  display: block;
+  padding-left:34rpx;
+  padding-right:34rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.continue {
+  position: absolute;
+  left:5%;
+  bottom:100rpx;
+  width: 90%;
+  height:88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background-color:#ff5454;
+  border-radius: 8rpx;
+  color:#fff;
+  font-size:32rpx;
+}

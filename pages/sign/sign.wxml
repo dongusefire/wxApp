@@ -1,0 +1,33 @@
+<!--pages/sign/sign.wxml-->
+<view class="regs">
+  <form bindsubmit="logIn">
+    <view class="reg-container">
+        <view class='form'>
+            <view class="itemView">
+                <input class="input" name="username" placeholder="请输入手机号码"/>
+            </view>
+            <view class="itemView key">
+                  <input class="input" name="password" value="{{pdd}}"  bindinput="setpsw" type="text" password hidden="{{visible}}" placeholder="输入密码，6到20位字符"/>
+                <input class="input" name="" value="{{pdd}}" bindinput="setpsw" type="text" hidden="{{!visible}}" placeholder="输入密码，6到20位字符"/>   
+                 <view class="key-img" bindtap='visibleness'>
+                    <image src="../../images/u774.png"></image>
+                </view>  
+            </view>
+        </view>
+        <view class="loginbar">
+                <button form-type="submit">登录</button>
+        </view>
+        <view class="forget-key">
+            <navigator url="../reset/reset">
+                <text>忘记密码</text>
+            </navigator>
+        </view>
+        <view class="new-per">
+            <navigator url="../regs/regs">
+                <text>新用户注册</text>
+            </navigator>
+        </view>    
+    </view>
+  </form>
+</view>
+

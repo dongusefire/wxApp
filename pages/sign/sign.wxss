@@ -1,0 +1,66 @@
+/* pages/sign/sign.wxss */
+.reg-container{
+  border-top:2rpx solid #c9c9c9;
+  margin-top:100rpx;
+}
+.form{
+  padding:0 30rpx 0 30rpx;
+}
+.itemView{
+  height:90rpx;
+  border-bottom:2rpx solid #c9c9c9;
+}
+.itemView input{
+  height:90rpx;
+  font-size:32rpx;
+  color:#999999;
+}
+.key{
+  width:100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.key input{
+  flex:1;
+}
+.key .key-img{
+  width:64rpx;
+  height:64rpx;
+  padding-left: 100rpx;
+}
+.key .key-img image{
+  width:100%;
+  height:100%;
+}
+.loginbar{
+  margin:46rpx 0 48rpx 0;
+}
+.loginbar button{
+  width:90%;
+  background: none;
+  border:none;
+  background:#30DDD9;
+  font-size:36rpx;
+  color:#ffffff;
+}
+.forget-key text{
+  float: right;
+  font-size:26rpx;
+  color:#1e1e1e;
+  padding-right:50rpx;
+}
+.new-per{
+  margin-top:414rpx;
+  text-align: center;
+}
+.new-per text{
+  line-height: 30px;
+  font-size: 30rpx;
+  color:#30DDD9;
+}

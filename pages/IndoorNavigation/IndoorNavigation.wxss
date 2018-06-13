@@ -1,0 +1,243 @@
+/* pages/IndoorNavigation/IndoorNavigation.wxss */
+/* 主体tab */
+button:after {
+  content: initial;
+}
+.tabs {
+  margin-top: 40rpx;
+}
+.tabs .tab-title {
+  color:#9e9e9e;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-indent: 24rpx;
+  display: block;
+}
+.tabs .form-content {
+  background: #fff;
+  padding:0 24rpx;
+}
+.tabs .form-content .item-box {
+  border-bottom:1rpx #eee solid;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  height: 80rpx;
+}
+.tabs .form-content .item-box:last-child {
+  border:none;
+}
+.tabs .form-content .item-box .item-title {
+  color:#252525;
+  font-size: 24rpx;
+  width:160rpx;
+  text-align: left;
+  font-weight: 600;
+}
+.tabs .form-content .item-box .item-input {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  -webkit-box-flex: 1.0;
+  -moz-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+.tabs .form-content .item-box .getcode {
+  border:none;
+  font-size: 24rpx;
+  color:#2c9bfe;
+}
+.tabs .form-content .item-box .countdown {
+  font-size: 24rpx;
+  color:#d5d5d5;
+}
+.tabs .btn-next {
+  width:90%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #30DDD9;
+  color:#fff;
+  font-size: 30rpx;
+  border-radius: 8rpx;
+  border:none;
+}
+.tabs .btn-next.default {
+  background: #a4eeed;
+}
+
+.bindvehicle .form-item{
+  width:90%;
+  margin:0 auto;
+  font-size: 0;
+}
+.bindvehicle .license-plate {
+  border: 1px solid #DCDCDC;
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+}
+.bindvehicle .license-plate view {
+  display: inline-block;
+  vertical-align: middle;
+}
+.bindvehicle .license-plate .line {
+  width:2rpx;
+  height:64rpx;
+  background:#dcdcdc;
+  position: absolute;
+  left:75rpx;
+  top:10rpx;
+  z-index: 2;
+}
+.tabs .license-plate .num {
+  width:76rpx;
+  height:84rpx;
+  line-height:84rpx;
+  font-size: 32rpx;
+  color:#333;
+  text-align: center;
+  font-weight: bold;
+}
+.bindvehicle .plate-order {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 22rpx;
+}
+.bindvehicle .plate-order .num {
+  width:68rpx;
+  height:84rpx;
+  line-height:84rpx;
+  font-size: 32rpx;
+  color:#333;
+  text-align: center;
+  text-transform:uppercase;
+  border: 1px solid #DCDCDC;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 13rpx;
+  vertical-align: middle;
+}
+.bindvehicle .plate-order .num.active {
+  box-shadow:0 0 3px 1px #30DDD9;
+}
+.bindvehicle .plate-order .num.addNum {
+  line-height: initial;
+  font-size: 17rpx;
+  color:#9e9e9e;
+  margin-right: 0;
+  border-style: dashed;
+}
+.bindvehicle .plate-order .num.addNum view:first-child {
+  color:#9b9b9b;
+  padding:15rpx 0 10rpx 0;
+  font-size: 20rpx;
+  font-weight: bold;
+}
+.bindvehicle .plate-order .num:last-of-type {
+  margin-right: 0;
+}
+.bindvehicle .plate-order .num.hide {
+  display:none;
+}
+.tabs .hidden {
+   width:0;
+  height: 0;
+  overflow: hidden; 
+}
+.tabs .newvehicle {
+  height: 70rpx;
+  line-height: 70rpx;
+  width:90%;
+  margin:0 auto;
+  font-size: 24rpx;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+
+}
+.tabs .newvehicle .clearPlate {
+  color:#30DDD9;
+}
+.tabs .newvehicle checkbox {
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+}
+.viewbody {
+  position: relative;
+  height: 100%;
+  width:100%;
+  overflow: hidden; 
+  background:#fcfcfc;
+}
+.viewbody .viewhead {
+  font-size: 34rpx;
+  color:#333;
+  font-family: "微软雅黑";
+  padding:60rpx 0 75rpx 0;
+  width:100%;
+  display: inline-block;
+  text-align: center;
+}
+.plateFirstKey {
+  background: #ecf2ff;
+  font-size: 0;
+  position: absolute;
+  bottom:-100%;
+  left:0;
+  right:0;
+  opacity: 0;
+  transition: bottom 0.6s;
+  -webkit-transition: bottom 0.6s;
+  -moz-transition: buttom 0.6s;
+  -ms-transition: bottom 0.6s;
+}
+.plateFirstKey.fadeIn {
+  bottom:0;
+  opacity: 1;
+}
+.plateFirstKey.fadeOut {
+  opacity: 0;
+  bottom:-100%;
+}
+.plateFirstKey .FirstKey-box {
+  padding-bottom: 20rpx;
+}
+.plateFirstKey .FirstKey {
+  width:120rpx;
+  line-height: 60rpx; 
+  height: 60rpx;
+  text-align: center;
+  background: #fff;
+  font-size: 32rpx;
+  margin-left: 26rpx;
+  margin-top: 20rpx;
+  color:#414141;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx 3rpx #b5b8be;
+}
+.plateFirstKey .closebtn {
+  margin:0;
+  height:100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  border-radius:0;
+}
+.plateInput {
+  border:1px #f00 solid;
+  background: blue;
+}

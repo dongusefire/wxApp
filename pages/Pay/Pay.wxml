@@ -1,0 +1,48 @@
+<!--pages/Pay/Pay.wxml-->
+<view class="bi_o">
+<view class="pay">
+  <view class="site">
+    <view class="name">{{item.parkingName}}</view>
+    <view class="specific"><image src="../../images/dw2x.png"></image>{{item.address}}</view>
+  </view>
+  <view class="particulars">
+    <view class="caption">停车详情</view>
+     <view class="content">
+        <view class="list">
+          <label>车牌号码：</label>
+          <text>{{item.carNo}}</text>
+        </view>
+        <view class="list">
+          <label>车辆类型：</label>
+          <text>临时车</text>
+        </view>
+        <view class="list">
+          <label>入场时间：</label>
+          <text>{{item.carNo}}</text>
+         </view>
+       <view class="list">
+          <label>离场时间：</label>
+          <text>{{item.carNo}}</text>
+      </view>
+      <view class="list">
+        <label>停车时长：</label>
+        <text>{{item.carNo}}</text>
+      </view>
+       <view class="list">
+          <label>支付状态：</label>
+          <text class="wait" wx:if="{{item.payState==0}}">待支付</text>  
+          <text class="paid" wx:else="{{item.payState==1}}">已支付</text>
+      </view>
+    </view>
+  </view>
+   <view class="consumption">
+      <text class="con">消费金额:</text>
+      <text class="num">{{item.parkFee}}</text>
+      <text class="element">元</text>
+  </view>
+   <view class="settlement" bindtap='payment' data-id="{{item.omitId}}"  wx:if="{{item.payState==0}}">支付</view>  
+  <view class="success" wx:else="{{item.payState==1}}">
+    支付
+  </view>
+ </view>
+</view>

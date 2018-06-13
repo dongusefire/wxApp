@@ -1,0 +1,64 @@
+page {
+  background-color: #fafafa;
+  position: relative;
+}
+.bi_o{
+  background-color: #fff;
+  padding-bottom:32rpx;
+  border-bottom: 1px solid #dcdcdc;
+}
+.failed {
+  text-align: center;
+  padding: 34rpx 0 60rpx 0;
+}
+.failed .text {
+  text-align: center;
+  color:#333333;
+  font-size: 48rpx;
+}
+.failed image {
+  width: 110rpx;
+  height: 110rpx;
+}
+.prompt .label {
+  padding-left:34rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.prompt .content {
+  display: block;
+  padding-left:34rpx;
+  padding-right:34rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.settlement {
+  margin-top: 150rpx;
+  text-align: center;
+}
+.settlement .pay {
+  position: absolute;
+  left:5%;
+  bottom:200rpx;
+  width: 90%;
+  height:88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background-color:#ff5454;
+  border-radius: 8rpx;
+  color:#fff;
+  font-size:32rpx;
+}
+.settlement .continue {
+  position: absolute;
+  left:5%;
+  bottom:320rpx;
+  width: 90%;
+  height:88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background-color:#30ddd9;
+  border-radius: 8rpx;
+  color:#fff;
+  font-size:32rpx;
+}

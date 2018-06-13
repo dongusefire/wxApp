@@ -1,0 +1,262 @@
+/* pages/reservation/reservation.wxss */
+page {
+  background-color: #f9f9f9;
+}
+
+.two_ways {
+  display: -webkit-box;  
+  display: -moz-box;     
+  display: -ms-flexbox;  
+  display: -webkit-flex; 
+  display: flex;
+  align-items: center;
+  height: 128rpx;
+  line-height: 128rpx;
+  width: 100%;
+  border-bottom: 1px solid #ececec;
+}
+.two_ways view {
+  color:#333333;
+  height: 44rpx;
+  flex:1;
+  line-height: 44rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+.two_ways .first {
+  border-right:1px solid #979797;
+}
+.two_ways .active {
+  color:#30DDD9;
+}
+.licensePlate {
+  text-align: center;
+  border-top: 1px solid #a1a1a1;
+  border-bottom: 1px solid #a1a1a1;
+  position: relative;
+  height: 170rpx;
+  line-height: 170rpx;
+  background-color: #4F5D66;
+}
+.licensePlate .select-park {
+  padding-right: 180rpx;
+}
+.licensePlate picker {
+  position: absolute;
+  left:0;
+  right:110rpx;
+  top:0;
+  bottom:0;
+  z-index: 8;
+  text-align:left;
+  text-indent:50rpx;
+  /* padding-right: 60rpx; */
+  /* height: 170rpx; */
+}
+.swithcarNo {
+  position: absolute;
+  right:110rpx;
+  top:50rpx;
+  width: 70rpx;
+  height: 70rpx;
+  z-index: 1;
+}
+.addPlate {
+  position: absolute;
+  right:20rpx;
+  top:50rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+.addPlate image,.swithcarNo image{
+  width: 72rpx;
+  height: 72rpx;
+  vertical-align: top;
+}
+.licensePlate .plateNumber {
+  font-size: 72rpx;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  padding:2rpx;
+}
+.licensePlate .chooseNum {
+  font-size: 40rpx;
+  color: #FFFFFF;
+}
+.container {
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+  border-radius: 8px;
+  height: 166rpx;
+  margin:34rpx;
+  padding:34rpx; 
+}
+.container view {
+  font-size: 14px;
+  color: #9B9B9B;
+  letter-spacing: 0;
+}
+.container .name {
+  font-size: 16px;
+  color: #333333;
+  letter-spacing: 0;
+  margin-bottom: 34rpx;
+}
+.list {
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+  border-top:1px solid #ececec;
+  border-bottom:1px solid #ececec;
+}
+.list .label {
+  font-size: 28rpx;
+  color: #333333;
+  letter-spacing: 0;
+}
+.list .content {
+  color:#bcbcbc;
+  font-size: 32rpx;
+}
+.list .green {
+  color:#008000;
+}
+.list .red {
+  color:#ff0000;
+}
+.content .end {
+  margin-top: 28rpx;
+}
+.botBar {
+  position: fixed;
+  bottom: -1rpx;
+  width: 100%;
+  height: 100rpx;
+  border-top: 1px solid #ededed;
+}
+.botBar .price {
+  float: left;
+  line-height: 100rpx;
+  width: 63%;
+  text-indent: 28rpx;
+  font-size: 32rpx;
+}
+.botBar .num {
+  color: #ff0000;
+}
+.botBar .pay {
+  margin:0;
+  width: 37%;
+  float: left;
+  height: 98rpx;
+  line-height: 98rpx;
+  border:none;
+  background-color: #FF5454;
+  border-radius: 0;
+  font-size: 32rpx;
+  color: #FFFFFF;
+}
+.botBar .noPay {
+  margin:0;
+  width: 37%;
+  float: left;
+  height: 98rpx;
+  line-height: 98rpx;
+  border:none;
+  background-color: #d1d1d1;
+  border-radius: 0;
+  font-size: 32rpx;
+  color: #FFFFFF;
+}
+.box {
+  display: flex;
+  display: -webkit-flex;
+  justify-content:space-between;
+  position: relative;
+} 
+.box .fr {
+  display: flex;
+  margin-right: 60rpx;
+}
+.box .fr .section {
+   padding-left: 30rpx; 
+} 
+.begin-time {
+   /* border:1px solid #dcdcdc;  */
+  padding:4rpx 8rpx;
+  font-size: 26rpx;
+  color: #9B9B9B;
+  letter-spacing: 0;
+}
+/* content2 */
+.content2 {
+  background-color: #fff;
+}
+.content2 .null-building {
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.content2 .building {
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  margin-top: 24rpx;
+}
+.content2 .area {
+  margin: 0 20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #dcdcdc;
+  font-size: 16px;
+  color: #333333;
+  letter-spacing: 0;
+  text-indent: 20rpx;
+}
+.content2 .can {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  padding: 0 80rpx 70rpx 80rpx;
+  justify-content:space-between;
+}
+.content2 .can text {
+  width: 34%;
+  text-align: center;
+  margin-top: 60rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  border:1px solid #dcdcdc;
+  border-radius: 72rpx;
+  font-size: 32rpx;
+  color: #333333;
+  letter-spacing: 0;
+}
+.content2 .can text.active {
+  color: #30DDD9;
+  border-color: #30DDD9;
+}
+button::after{
+  border: none;
+}
+.map {
+  display: -webkit-box;  
+  display: -moz-box;     
+  display: -ms-flexbox;  
+  display: -webkit-flex; 
+  display: flex;      
+  flex-wrap: wrap;
+}
+.map view {
+  width: 60rpx;
+  height: 100rpx;
+  border:1px solid #96d5f3;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+.map .noOrder {
+  background-color: red;
+}
+.map .order {
+  background-color: green;
+}

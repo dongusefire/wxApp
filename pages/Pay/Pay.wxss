@@ -1,0 +1,103 @@
+/* pages/Pay/Pay.wxss */
+page{
+  position: relative;
+  background-color:#fafafa;
+}
+.bi_o{
+  background-color: #fff;
+}
+.site {
+  padding:34rpx 34rpx;
+  border-bottom: 1px solid #dcdcdc;
+}
+.site .name {
+  font-size:32rpx;
+  color: #333333;
+  padding-bottom:28rpx;
+  display: block;
+}
+.site .specific image {
+   width:20rpx;
+   height:28rpx;
+   display: inline-block;
+   padding-right:12rpx;
+   vertical-align: middle;
+}
+.site .specific{
+    font-size:28rpx;
+    color: #9B9B9B;
+}
+.particulars {
+ padding:34rpx 0 50rpx 0;
+}
+.particulars .caption {
+   color:#333333;
+  font-size:32rpx;
+  line-height:44rpx;
+  padding-left: 34rpx;
+}
+.particulars .content .list {
+  padding-left:34rpx;
+  margin-top:28rpx;
+}
+.particulars .content .list label {
+   color:#999999;
+  font-size:28rpx;
+  line-height: 40rpx;
+}
+.particulars .content .list text{
+  color:#999999;
+  font-size:28rpx;
+  line-height: 40rpx;
+}
+.particulars .content .list .time text {
+  display: inline-block;
+  padding-left:6rpx;
+  line-height:34rpx;
+}
+.particulars .content .list .time text:nth-child(2){
+  text-align: center;
+}
+.particulars .content .box {
+  display: flex;
+  display: -webkit-flex;
+}
+.particulars .content .box label{
+  padding-top:6rpx;
+}
+.consumption{
+  padding:29rpx 0 29rpx 34rpx;
+  border-bottom: 1px solid #dcdcdc;
+  border-top: 1px solid #dcdcdc;
+}
+.consumption text{
+    font-size:28rpx;
+    color:#333333;
+}
+.consumption .num{
+  padding-left:10rpx;
+  color:#ff5454;
+}
+.settlement {
+  width: 80%;
+  margin-left: 10%;
+  background-color: rgba(255, 153, 0, 1);
+  text-align: center;
+  margin-top: 40rpx;
+  padding:14rpx 0;
+  border-radius: 10rpx;
+  color:#fff;
+}
+.success {
+  position: absolute;
+  left:5%;
+  bottom:100rpx; 
+  width: 90%;
+  height:88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background-color:#FF5454;
+  border-radius: 8rpx;
+  color:#fff;
+  font-size:32rpx;
+}

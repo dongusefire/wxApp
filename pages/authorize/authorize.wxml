@@ -1,0 +1,6 @@
+<!--pages/authorize/authorize.wxml-->
+<view class="item-auth">
+    <image src="../../images/u1k.png" class="bgI"></image>
+    <text>本小程序需授权后才能使用。您可以点击“授权”完成手工授权</text>
+    <button class="btn-auth" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button>
+</view>

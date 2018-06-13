@@ -1,0 +1,130 @@
+<!--pages/reservation/reservation.wxml-->
+<view>
+   <!-- <form bindsubmit="formSubmit" wx:for="{{list}}"   wx:key="{{index}}">  -->
+   <form bindsubmit="formSubmit"> 
+   <!-- <view class="prompt"><text>选择本次预定的车牌号码</text></view> -->
+    <view class="two_ways" hidden="{{carSpace}}">
+      <view class="{{selected?'active first':'first'}}" bindtap="selected">预定到场</view>
+      <view class="{{selected1?'active':''}}" bindtap="selected1">预定到位</view>
+    </view>
+   <view class="licensePlate" wx:if="{{selected}}">
+    <view class="select-park">
+      <picker  wx:if="{{carList}}" bindchange="bindPickerChange" value="{{index}}" range="{{carList}}">
+        <view class="weui-input"><text class="plateNumber">{{defaultCar}}</text></view>
+      </picker>
+      <view wx:else class="weui-input"><text class="chooseNum">选择本次预定的车牌号码</text></view>
+    </view>
+     <view class="swithcarNo">
+       <image src="../../images/switch.png" class="switchImg"></image> 
+    </view> 
+     <navigator url="../addvehicle/addvehicle"  hover-class="none" class="addPlate"><image src="../../images/tj.png"></image>
+     </navigator> 
+   </view>
+   <view class="content" wx:if="{{selected}}">
+    <!--div块  -->
+    <view class="container">
+      <view class="name">{{parkingName}}</view>
+      <view class="price">
+        <text class="label">预定价格：</text>
+        <text>{{bookPriceText}}元</text>
+        <text>/小时</text>
+      </view>
+      <view class="way">
+        <text>车位编号：</text>
+        <!--车位编号需要做后续判断，先定为随机车位  -->
+        <text>{{parkNum==''? '随机车位':parkNum}}</text>
+      </view>
+    </view>
+    <view class="list box">
+      <text class="label">预定开始时间</text>
+      <view class="fr">
+        <view class="section">
+          <picker mode="date" value="{{date}}" name="bookStartTime" start="{{beginStart}}" end="{{beginEnd}}" bindchange="bindDateChange">
+            <view class="picker">
+              <text wx:if="{{date}}" class="begin-time">{{date}}</text>
+              <text wx:else class="begin-time">请选择日期</text>
+            </view>
+          </picker>
+        </view>
+        <view class="section">
+          <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view class="picker">
+              <text wx:if="{{timeflag1}}" class="begin-time">{{multiArray[0][multiIndex[0]]}}:{{multiArray[1][multiIndex[1]]}}</text>
+              <text wx:else class="begin-time">请选择时间</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="list box end">
+      <text class="label">预定结束时间</text>
+      <view class="fr">
+        <view class="section">
+          <picker mode="date" value="{{date2}}" start="{{finishStart}}" end="{{finishEnd}}" bindchange="bindDate2Change">
+            <view class="picker">
+              <text wx:if="{{date2}}" class="begin-time">{{date2}}</text>
+              <text wx:else class="begin-time">请选择日期</text>
+            </view>
+          </picker>
+        </view>
+        <view class="section">
+          <picker mode="multiSelector" bindchange="bindMultiPickerChange2" bindcolumnchange="bindMultiPickerColumn2Change" value="{{multiIndex2}}" range="{{multiArray2}}">
+            <view class="picker">
+              <text wx:if="{{timeflag2}}" class="begin-time">{{multiArray2[0][multiIndex2[0]]}}:{{multiArray2[1][multiIndex2[1]]}}</text>
+              <text wx:else class="begin-time">请选择时间</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+   </view>
+   <view class="content2" wx:elif="{{selected1}}">
+    <view class="building" hidden="{{building.length==0}}" wx:for="{{building}}" wx:for-index="index">
+      <view class="area">{{item.building}}栋停车场</view>
+      <view class="can">
+        <text wx:for="{{item.floors}}" wx:for-index="ind" wx:for-item="f" data-building="{{item.building}}" data-floor="{{index+','+ind}}" hover-class="none" bindtap='chooseFloor'>{{f}}层</text>
+      </view>
+    </view>
+    <view class="null-building" hidden="{{building.length!=0}}">该停车场不支持预定到位</view>
+   </view>
+   <view class="map" wx:else>
+    <view data-attr="can" data-num="1" class="{{num_==1?'order':''}}" bindtap='order'></view>
+    <view data-attr="canNot" data-num="2"  class="noOrder"  bindtap='order'></view>
+    <view data-attr="can" data-num="3"  class="{{num_==3?'order':''}}" bindtap='order'></view>
+    <view data-attr="can" data-num="4"  class="{{num_==4?'order':''}}"  bindtap='order'></view>
+    <view data-attr="can" data-num="5"  class="{{num_==5?'order':''}}" bindtap='order'></view>
+    <view data-attr="canNot" data-num="6"  class="noOrder"  bindtap='order'></view>
+    <view data-attr="canNot" data-num="7"  class="noOrder" bindtap='order'></view>
+    <view data-attr="canNot" data-num="8"  class="noOrder"  bindtap='order'></view>
+    <view data-attr="can" data-num="9"  class="{{num_==9?'order':''}}" bindtap='order'></view>
+    <view data-attr="canNot"  data-num="10" class="noOrder"  bindtap='order'></view>
+   </view>
+  <!-- <button formType="submit"  class="order">预订</button> -->
+  <view class="botBar" hidden='{{selected1==true||selected2==true}}'>
+    <view class="price">
+      <text class="label">应付定金：</text>
+      <text class="num">{{bookFeeText}}</text>
+    </view>
+    <button wx:if="{{carList!=null && carList.length!=0 && defaultCar!=''}}" formType="submit"  class="pay">确认支付</button>
+    <button wx:else formType="submit"  class="noPay">确认支付</button>
+  </view>
+  <!--车牌号  -->
+  <input name="carNo" value="{{defaultCar}}" hidden='true' />
+  <!--车场编号  -->
+  <input name="parkCode" value="{{getparkCode}}" hidden='true' />
+  <!--企业号  -->
+  <input name="ltdCode" value="{{getltdCode}}" hidden='true' /> 
+  <!--开始时间  -->
+   <input name="bookStartTime" value="{{bookStartTime}}" hidden='true' /> 
+  <!--结束时间  -->
+  <input name="bookEndTime" value="{{bookEndTime}}" hidden='true' />
+  <!--预约定金  -->
+  <input name="bookFee" value="{{bookFee}}"  hidden='true'/>
+  <!--预约价格  -->
+  <input name="bookPrice" value="{{bookFeeText}}"  hidden='true'/>
+  <!--预约时长  -->
+  <input name="bookDuration" value="{{timeDifference}}" hidden='true' />
+  <!--openId  -->
+  <input name="openId" value="{{openId}}" hidden='true' /> 
+  </form>
+</view>

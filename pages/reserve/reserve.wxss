@@ -1,0 +1,144 @@
+/* pages/reserve/reserve.wxss */
+.parent {
+  background: #fbfbfb;
+}
+.column{
+  background:#ffffff;
+  margin-bottom: 30rpx;
+}
+.column .park-title{
+  height: 98rpx;
+  padding:0 36rpx;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content:space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.column .park-title .car-stop text{
+   font-size:30rpx;
+   color:#333;
+
+}
+.column .park-title .deal-btn .pay {
+    font-size:24rpx;
+    color:#ff5454;
+    display:inline-block;
+}
+.column .park-title .deal-btn .pay.finished {
+  color:#9b9b9b;
+}
+.column .park-title .deal-btn .pay.reserve {
+  color:#58e4e1;
+}
+.column .park-title .deal-btn .cancelpay {
+  font-size:24rpx;
+  color:#4d4d4d;
+  display:inline-block;
+}
+.column .park-title .deal-btn .line {
+  width:2rpx;
+  height: 38rpx;
+  background: #979797;
+  display:inline-block;
+  vertical-align: middle;
+  margin:0 24rpx;
+}
+.park-info {
+  padding:0 34rpx;
+  border-top:2rpx solid #ECECEC;
+  font-size: 24rpx;
+  color:#9b9b9b;
+  padding-bottom: 18rpx;
+}
+.park-info.down {
+  padding-top: 18rpx;
+  border-top:2rpx solid #ECECEC;
+}
+.park-pos{
+    padding-top:24rpx;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.park-pos image{
+  width:20rpx;
+  margin-right: 10rpx;
+}
+.order-time{
+  padding-top: 24rpx;
+}
+.order-time .time .data{
+    padding-left:16rpx;
+}
+.car-num{
+    padding-top: 18rpx;
+}
+.car-num .time{
+   color:#949494;
+}
+.car-num .cost{
+  padding-right:40rpx;
+}
+.car-num .time .data{
+    padding-left:18rpx;
+}
+.park-info .price {
+  padding-top: 24rpx;
+  font-size: 26rpx;
+  color:#373737;
+}
+.park-info .price .data {
+  padding-left: 20rpx;
+}
+.details {
+  display: flex;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 96rpx;
+  padding-right: 34rpx;
+  font-size: 26rpx;
+  color:#333;
+  border-bottom:2rpx solid #ECECEC;
+}
+.details image {
+  width:36rpx;
+  height: 36rpx;
+}
+.park-down-box {
+  height: 0;
+  overflow: hidden;
+}
+.park-down-box.kind-show {
+  height: auto;
+}
+.park-info.down {
+  opacity:0;
+  transform:translateY(-50%);
+  transition:.3s;
+}
+.park-info.box-show {
+  opacity:1;
+  transform:translateY(0);
+}

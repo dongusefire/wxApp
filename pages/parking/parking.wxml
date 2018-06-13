@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<!-- 搜索 -->
+<view class="parking">
+  <view class="searchbar">
+    <view class="search-input">
+      <input type="text" placeholder="" confirm-type="done" bindconfirm="searchPark" />
+      <image src="../../images/ss2x.png" mode="scaleToFill" class="search-icon"></image>
+      <!-- <icon type="search" size="20" class="search-icon"/> -->
+    </view>
+  </view>
+  <!-- 停车场列表 -->
+  <view class="depot-list">
+  <block  wx:for="{{logs}}"  wx:key="index" >
+      <view class="depot-box" hidden='{{item.hide}}' data-parkcode="{{item.parkCode}}" data-ltdcode="{{item.ltdCode}}" bindtap='setPlace'>
+          <view class="depot-hd" >
+            <text class="depot-title">{{item.parkingName}}</text>
+            <view class="range">{{item.distance}}km</view>
+          </view>
+        <view class="depot-seat"><image src="../../images/u79.png" mode="scaleToFill"></image>{{item.address}}</view>
+          <view class="depot-info {{item.minPrice==null? '':'h100'}}">
+            <view class="inline-item">
+              <text class="default">车位:<text class="hot">{{item.carPortSurplusCount}}</text>/{{item.carPortCount}}</text>
+              <text class="price">价格:<text class="red">{{item.minPrice==item.maxPrice? (item.minPrice/100):(item.minPrice/100)+'~'+(item.maxPrice/100)}}元/</text>小时</text> 
+              <view hidden=''></view>
+            </view>
+            <view class="inline-item">
+              <view class="unclock" data-key="{{index}}" catchtap='isLock'><image src="../../images/{{item.lock? 'reserve2':'reserve'}}.png"></image>{{item.lock?'车位上锁':'车位解锁'}}</view>
+            </view> 
+          </view> 
+      </view>
+    </block>
+    <!-- <view class="no-more">没有更多停车场了</view> -->
+  </view>
+  <!-- <view id="reserve"><image src="../../images/reserve.png" mode="scaleToFill"></image></view> -->
+</view>

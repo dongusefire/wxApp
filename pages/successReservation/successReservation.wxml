@@ -1,0 +1,45 @@
+<view>
+<view class="bi_o">
+  <view class="success">
+    <!-- <view class="logo">
+       <image></image> 
+    </view> -->
+    <image src="../../images/u624.png"></image>
+    <view class="text">
+      预订成功
+    </view>
+  </view>
+  <view class="Prompt">温馨提示：</view>
+  <view class="orders">
+      <text class="one">1.请在订单有效期内停车，否则将额外产生临时停车费用；</text>
+      <text class="two">2.请勿早于预定时间30分钟以上入场，否则将无法使用该预定权限</text>
+  </view>
+  </view>
+  <view class="prompt">
+    <view class="label">车位预订订单信息：</view>
+    <view class="content">
+      <view class="list">
+        <label>车牌号码：</label>
+        <text>{{carNo}}</text>
+      </view>
+      <view class="list">
+        <label>停车场名称：</label>
+        <text>{{parkName}}</text>
+      </view>
+      <view class="list">
+        <label>车位编号：</label>
+        <text>{{parkName}}</text>
+      </view>
+      <view class="list box">
+        <label>预定时间段：</label>
+        <view class="time">
+          <text>{{startTime}}</text>
+          <text>{{endtime}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="settlement" bindtap='confirm'>
+    确定
+  </view>
+</view>

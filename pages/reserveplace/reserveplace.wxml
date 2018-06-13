@@ -1,0 +1,4 @@
+<!--pages/reserveplace/reserveplace.wxml-->
+<view id="reserveplace">
+  <web-view src="{{src}}"></web-view>
+</view>

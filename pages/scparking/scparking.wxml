@@ -1,0 +1,2 @@
+<!--pages/scparking/scparking.wxml-->
+<web-view src="{{src}}" bindmessage="postMsg"></web-view>

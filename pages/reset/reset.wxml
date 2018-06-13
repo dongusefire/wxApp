@@ -1,0 +1,27 @@
+<!--pages/regs/regs.wxml-->
+<view class="regs" style="border-top:12rpx solid #27c171;">
+  <form  bindsubmit="formSubmit">
+    <view class="reg-container">
+      <view class='form'>
+          <view class="itemView">
+              <input class="input" type="number" name="username" value="{{userPhone}}" bindinput='setPhoneData' placeholder="请输入手机号码"/>
+          </view>
+          <view class="itemView code">
+              <input class="input" name="code" placeholder="请输入手机验证码"/>
+              <button class="btn {{selected? 'phone_huo':''}}" bindtap='getcode'>获取验证码</button>
+              <button class="btn count {{!selected? 'phone_huo':''}}">{{second}}s后重新获取</button>
+          </view>
+          <view class="itemView key">
+             <input class="input" name="password" value="{{pdd}}" bindinput="setpsw" type="text" password  hidden="{{visible}}" placeholder="设置密码，6到20字符"/>
+             <input class="input" type="text" value="{{pdd}}" bindinput="setpsw"  hidden="{{!visible}}" placeholder="设置密码，6到20字符"/>
+              <view class="key-img" bindtap='visibleness'>
+                  <image src="../../images/u774.png"></image>
+              </view>
+          </view>
+      </view>
+       <view class="loginbar">
+              <button formType="submit">重置密码</button>
+      </view> 
+   </view>
+  </form>
+</view>

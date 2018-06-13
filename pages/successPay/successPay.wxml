@@ -1,0 +1,7 @@
+<view class="successPay">
+  <view class="icon">
+    <image src="../../images/u624.png" mode='widthFix'></image>
+    <view class="prompt">支付成功</view>
+  </view>
+  <view class="confirm" bindtap='sure'>确定</view> 
+</view>

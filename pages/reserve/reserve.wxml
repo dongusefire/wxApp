@@ -1,0 +1,44 @@
+<!--pages/reserve/reserve.wxml-->
+<view class="parent">
+  <view class="column" wx:for="{{list}}" wx:key="{{index}}">
+    <view class="park-title">
+          <view class="car-stop">
+              <text>{{item.parkingName}}</text>
+          </view>
+          <view class="deal-btn">
+              <view class="cancelpay" wx:if="{{item.bookState == -1}}">已取消</view>
+              <view class="pay" wx:elif="{{item.bookState == 0}}" data-id="{{item.bookId}}" bindtap='Payomit'>支付</view> 
+              <view class="pay reserve" wx:elif="{{item.bookState == 1}}">已预定</view>
+              <view class="pay finished" wx:else>已完成</view>
+          </view>
+    </view>
+    <view class="park-info">
+      <view class="park-pos">
+            <image src="../../images/u79.png" mode='widthFix'></image>
+            <text>{{item.address}}</text>  
+      </view>
+      <view class="order-time">
+            <view class="time">预订时间:<text class="data">{{item.bookTime}}</text></view>
+      </view>
+      <view class="price">
+        <view class="time cost">消费金额:<text class="data">{{item.bookFee}}元</text></view>
+      </view> 
+    </view>
+    <view class="park-down-box {{item.open? 'kind-show':''}}">
+      <view class="park-info down {{item.open? 'box-show':''}}">
+        <view class="car-num">
+              <view class="time">车牌号码:<text class="data">{{item.carNo}}</text></view>
+        </view>
+        <view class="car-num">
+              <view class="time">预定车位编号:<text class="data">{{item.parkNum}}</text></view>
+        </view>
+        <view class="order-time">
+              <view class="time">入场时间:<text class="data">{{item.inTime==null? '暂未获取到':item.inTime}}</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="details" id="{{item.bookId}}" bindtap='kindToggle'>
+      <image src="../../images/{{item.open? 'vf2x':'v2x'}}.png" mode='widthFix'></image>
+    </view>
+  </view>
+</view>

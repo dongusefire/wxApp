@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/parking/parking",
+    "pages/authorize/authorize",
+    "pages/reservation/reservation",
+    "pages/sign/sign",
+    "pages/addvehicle/addvehicle",
+    "pages/reset/reset",
+    "pages/successReservation/successReservation",
+    "pages/reserve/reserve",
+    "pages/myTrip/myTrip",
+    "pages/Pay/Pay",
+    "pages/failedReservation/failedReservation",
+    "pages/myvehicle/myvehicle",
+    "pages/my/user",
+    "pages/noReservation/noReservation",
+    "pages/logs/logs",
+    "pages/map/map",
+    "pages/failedPay/failedPay",
+    "pages/regs/regs",
+    "pages/successPay/successPay",
+    "pages/IndoorNavigation/IndoorNavigation",
+    "pages/reserveplace/reserveplace",
+    "pages/scparking/scparking",
+    "pages/vehicleUnlock/vehicleUnlock"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#30DDD9",
+    "navigationBarTitleText": "智慧停车",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#9a9a9a",
+    "selectedColor": "#292929",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/IndoorNavigation/IndoorNavigation",
+        "text": "寻车导航",
+        "iconPath": "images/u2.png",
+        "selectedIconPath": "images/u1.png"
+      },
+      {
+        "pagePath": "pages/parking/parking",
+        "text": "附近停车场",
+        "iconPath": "images/u4.png",
+        "selectedIconPath": "images/u3.png"
+      },
+      {
+        "pagePath": "pages/my/user",
+        "text": "我的",
+        "iconPath": "images/u6.png",
+        "selectedIconPath": "images/u5.png"
+      }
+    ]
+  }
+}

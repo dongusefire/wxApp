@@ -1,0 +1,38 @@
+<view>
+  <view class="failed">
+    <!-- <view class="logo">
+       <image></image> 
+    </view> -->
+    <image src="../../images/u452.png"></image>
+    <view class="text">
+      支付失败
+    </view>
+  </view>
+  <view class="prompt">
+    <view class="label">车位预订订单信息：</view>
+    <view class="content">
+      <view class="list">
+        <label>车牌号码：</label>
+        <text>{{carNo}}</text>
+      </view>
+      <view class="list">
+        <label>停车场名称：</label>
+        <text>{{parkName}}</text>
+      </view>
+      <view class="list">
+        <label>车位编号：</label>
+        <text>{{parkName}}</text>
+      </view>
+      <view class="list box">
+        <label>预定时间段：</label>
+        <view class="time">
+          <text>{{startTime}}</text>
+          <text>{{endtime}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="settlement" bindtap='continuePay'>
+    继续支付    
+  </view>
+</view>

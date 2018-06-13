@@ -1,0 +1,13 @@
+<view>
+ <view class="bi_o">
+  <view class="icon">
+    <image src="../../images/u452.png" mode="widthFix"></image>
+    <view class="msg">支付失败</view>
+  </view>
+  <view class="prompt">
+    <view class="title">温馨提示：</view>
+    <view class="content">非常抱歉，网络异常，支付超时，请重新支付！</view>
+  </view>
+</view>
+<view class="continue" bindtap='continuePay'>继续支付</view>
+</view>

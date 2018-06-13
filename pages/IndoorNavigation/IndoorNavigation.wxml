@@ -1,0 +1,51 @@
+<!--pages/IndoorNavigation/IndoorNavigation.wxml-->
+<view class="viewbody">
+  <text class="viewhead">请输入完整的车牌号</text>
+  <view class="tabs">
+    <view class="tab bindvehicle">
+      <form bindsubmit='tighten'>
+        <view class="form-item">
+          <view class="license-plate">
+            <view class="num" bindtap='showFirstKey'>{{FirstKey}}</view>
+            <view class="line"></view>
+            <view class="num" bindtap="showCityOrder">{{selectCity}}</view>
+          </view>
+          <view class="plate-order">
+            <view class="num {{plateIndex==0? 'active':''}}" data-index="0" bindtap="tokeyboard">{{plateArr[0]}}</view>
+            <view class="num {{plateIndex==1? 'active':''}}" data-index="1" bindtap="tokeyboard">{{plateArr[1]}}</view>
+            <view class="num {{plateIndex==2? 'active':''}}" data-index="2" bindtap="tokeyboard">{{plateArr[2]}}</view>
+            <view class="num {{plateIndex==3? 'active':''}}" data-index="3" bindtap="tokeyboard">{{plateArr[3]}}</view>
+            <view class="num {{plateIndex==4? 'active':''}}" data-index="4" bindtap="tokeyboard">{{plateArr[4]}}</view>
+            <view class="num addNum {{Maxlen==6? 'hide':''}}" bindtap="addNum">
+              <view>+</view>
+              <view>新能源</view>
+            </view>
+            <view class="num {{Maxlen==5? 'hide':''}} {{plateIndex==5? 'active':''}}" data-index="5" bindtap="tokeyboard">{{plateArr[5]}}</view>
+          </view>
+          <view class="hidden"><input type="text" class="plateInput" value="{{plate}}" cursor="{{cursor}}" bindblur="blurPlate" bindinput='changePlate' focus="{{plateFocus}}" maxlength="{{Maxlen}}" /></view>
+        </view>
+        <view class="newvehicle">
+          <view class="clearPlate" bindtap='clearPlate'>清空</view>
+          <checkbox-group name="newEnergy" bindchange="checkboxChange">
+            <label class="checked">
+              <checkbox value="1" color='#30DDD9' checked='{{Maxlen==6}}'/><text>新能源车牌</text>
+            </label>
+          </checkbox-group>
+        </view>
+        <button size="default" class="btn-next {{isDefault? 'default':''}}" form-type="submit">确 定</button>
+      </form>
+    </view>
+  </view>
+  <view class="plateFirstKey {{toggleFirstKey? 'fadeIn':'fadeOut'}}">
+    <view class="FirstKey-box">
+      <view class="FirstKey" wx:for="{{provinceItems}}" data-name="{{item}}" bindtap="selectFirst" wx:for-item="item" wx:key="$key">{{item}}</view>
+    </view>
+    <button class="closebtn" bindtap='closeplateFirst'>关闭</button>
+  </view>
+  <view class="plateFirstKey {{toggleCity? 'fadeIn':'fadeOut'}}">
+    <view class="FirstKey-box">
+      <view class="FirstKey" wx:for="{{cityOrder}}" data-name="{{item}}" bindtap="selectCity" wx:for-item="item" wx:key="$key">{{item}}</view>
+    </view>
+    <button class="closebtn" bindtap='closeCityOrder'>关闭</button>
+  </view>
+</view>

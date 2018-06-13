@@ -1,0 +1,88 @@
+page {
+  position: relative;
+  background-color: #fafafa;
+}
+.bi_o{
+  background-color: #fff;
+  padding-bottom:32rpx;
+  border-bottom: 1px solid #dcdcdc;
+}
+.success {
+  text-align: center;
+  padding: 34rpx 0 72rpx 0;
+
+}
+.success .text {
+  text-align: center;
+  color:#333333;
+  font-size: 48rpx;
+}
+.success image {
+  width: 110rpx;
+  height: 110rpx;
+}
+.Prompt{
+  padding-left:34rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.one,.two{
+  display: block;
+  padding-left:34rpx;
+  padding-right:34rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.prompt {
+  padding-top:34rpx;
+}  
+.prompt .label {
+  color:#333333;
+  font-size:32rpx;
+  line-height:44rpx;
+  padding-left: 34rpx;
+  
+}
+.prompt .content .list{
+  padding-left:34rpx;
+  margin-top:28rpx;
+}
+.prompt .content .list label {
+  color:#999999;
+  font-size:28rpx;
+  line-height: 40rpx;
+}
+.prompt .content .list text{
+  color:#151515;
+  font-size:28rpx;
+  line-height: 40rpx;
+}
+.prompt .content .list .time text {
+  display: inline-block;
+  padding-left:6rpx;
+  line-height:34rpx;
+}
+.prompt .content .list .time text:nth-child(2){
+  text-align: center;
+}
+.prompt .content .box {
+  display: flex;
+  display: -webkit-flex;
+}
+.prompt .content .box label{
+  padding-top:6rpx;
+}
+.settlement {
+  position: absolute;
+  left:5%;
+  bottom:100rpx;
+  width: 90%;
+  height:88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background-color:#30ddd9;
+  border-radius: 8rpx;
+  color:#fff;
+  font-size:32rpx;
+}
+

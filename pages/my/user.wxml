@@ -1,0 +1,83 @@
+<!--pages/my/user.wxml-->
+<view class="container">
+ <view class="index-hd" hidden='{{token==""}}'>
+    <view class="user-avatar">
+     <image src="{{avatarUrl || '../../images/u704.png'}}" mode='widthFix'></image>
+  </view>
+  <view class="user-info">
+    <text class="user-name">{{username}}</text>
+    <view class="user-grade">
+      <image src="../../images/{{vipImg}}.png" mode='widthFix'></image>
+    </view>
+    <text class="user-credit">信用值：<text class="value">{{creditValue}}</text></text>
+  </view>  
+ </view>
+ <!-- 未登录 -->
+ <view class="index-hd-n" hidden='{{token!=""}}'>
+   <view class="fa">
+    <view class="noImg">
+       <image src="../../images/u704.png"></image> 
+    </view>
+    <view class="operation">
+      <navigator url="../sign/sign" hover-class="none">登录</navigator> |
+      <navigator  url="../regs/regs" hover-class="none">注册</navigator>
+    </view>
+  </view> 
+ </view>
+ <!-- 未登录 -->
+ <view class="index-bd">
+    <view class="index-nav">
+        <navigator url="../myvehicle/myvehicle" class="nav"> 
+          <view class="icon-left">
+              <image src="../../images/u720.png"></image>
+          </view>
+          <view class="icon-center">
+              <p>我的车辆</p>
+          </view>
+          <view class="icon-right">
+                <image src="../../images/u714.png" mode='widthFix'></image>
+          </view>
+        </navigator> 
+    </view>
+     <view class="index-nav">
+       <navigator class="nav" url="../myTrip/myTrip">
+          <view class="icon-left">
+              <image src="../../images/u722.png"></image>
+          </view>
+          <view class="icon-center">
+              <p>我的行程</p>
+          </view>
+          <view class="icon-right">
+                <image src="../../images/u714.png" mode='widthFix'></image>
+          </view>
+        </navigator> 
+    </view>
+    <view class="index-nav">
+       <navigator class="nav" url="../reserve/reserve">
+          <view class="icon-left">
+              <image src="../../images/u724.png"></image>
+          </view>
+          <view class="icon-center">
+              <p>车位预定记录</p>
+          </view>
+          <view class="icon-right">
+                <image src="../../images/u714.png" mode='widthFix'></image>
+          </view>
+        </navigator> 
+    </view>
+	<view class="index-nav">
+       <navigator class="nav" bindtap='tip'>
+          <view class="icon-left">
+              <image src="../../images/jh2x.png"></image>
+          </view>
+          <view class="icon-center">
+              <p>资产交换</p>
+          </view>
+          <view class="icon-right">
+                <image src="../../images/u714.png" mode='widthFix'></image>
+          </view>
+        </navigator> 
+    </view>
+ </view>
+ 
+</view>

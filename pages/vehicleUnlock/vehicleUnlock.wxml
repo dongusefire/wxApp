@@ -1,0 +1,13 @@
+<view class="page-section">
+  <view class="weui-cells weui-cells_after-title">
+    <radio-group bindchange="radioChange">
+      <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+        <view class="weui-cell__hd">
+          <radio value="{{item.value}}" checked="{{item.checked}}" color="#30DDD9"/>
+        </view>
+        <view class="weui-cell__bd">{{item.name}}</view>
+      </label>
+    </radio-group>
+  </view>
+</view>
+<button hover-class="none" bindtap='fixedQuery'>确定车牌</button>

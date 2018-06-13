@@ -1,0 +1,7 @@
+<view class="notice-content">
+  <view class="container">
+    <image src="../../images/icon-msg-notice.png" mode="aspectFit" />
+    <view class="tip">温馨提示</view>
+    <view class="msg">{{msg}}</view>
+  </view>
+</view>

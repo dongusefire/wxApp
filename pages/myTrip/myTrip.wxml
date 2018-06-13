@@ -1,0 +1,34 @@
+<!--pages/reserve/mtTrip.wxml-->
+<view class="parent">
+  <view class="column" wx:for="{{logs}}" wx:key="{{index}}">
+    <view class="park-title">
+          <view class="car-stop">
+              <text>{{item.parkingName}}</text>
+          </view>
+          <view class="deal-btn">
+              <view class="pay" wx:if="{{item.payState == 0}}" data-id="{{item.omitId}}" bindtap='Payomit'>待支付</view> 
+              <view class="pay finished" wx:else="{{item.payState == 1}}">已完成</view> 
+          </view>
+    </view>
+    <view class="park-info">
+      <view class="park-pos">
+            <image src="../../images/u79.png" mode='widthFix'></image>
+            <text>{{item.address}}</text>  
+      </view>
+      <view class="car-num">
+            <view class="time">车牌号码:<text class="data">{{item.carNo}}</text></view>
+      </view>
+      <view class="order-time">
+            <view class="time">停车时间:<text class="data">{{item.inTime}}</text></view>
+      </view>
+      <view class="price">
+        <view class="time cost">消费金额:<text class="data">{{item.parkFee}}元</text></view>
+      </view> 
+    </view>
+    <view class="details">
+      <navigator url="../Pay/Pay?getId={{item.omitId}}">详情>></navigator>
+    </view>
+  </view>
+</view>
+
+

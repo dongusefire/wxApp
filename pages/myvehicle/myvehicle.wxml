@@ -1,0 +1,16 @@
+<!--pages/myvehicle/myvehicle.wxml-->
+<view id="myvehicle">
+  <view class="vehicle-list">
+    <view class="vehicle-box" wx:for="{{carList}}" wx:for-item="item" wx:key="index" data-carno="{{item.carNo}}" data-key="{{index}}" bindtap="changeDefault">
+      <view class="vehicle-bg"><image src="../../images/cpbj2x.png" mode='widthFix'></image></view>
+      <text class="default">{{item.isDefault==1? '默认车牌':''}}</text>  
+      <view class="vehicle-title">{{item.carNo}}</view>
+      <view class="removeCar" catchtap='removeCar' data-carno="{{item.carNo}}">删除</view>
+    </view>
+  </view>
+  <view class="addvehicle">
+    <navigator url='../addvehicle/addvehicle'>
+      +<text>添加车牌</text>
+    </navigator>
+  </view>
+</view>

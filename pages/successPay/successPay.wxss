@@ -1,0 +1,34 @@
+/* pages/successPay/successPay.wxss */
+.successPay {
+  background-color: #fbfbfb;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.icon {
+  text-align: center;
+  padding-top: 42rpx;
+  height: 274rpx;
+  background:#fff;
+  border-bottom:2rpx #ececec solid;
+}
+.icon image{
+  width: 130rpx;
+}
+.icon .prompt {
+  color:#333;
+  font-size: 42rpx;
+}
+.confirm {
+  position: absolute;
+  bottom:50rpx;
+  left:5%;
+  width: 90%;
+  text-align: center;
+  color:#fff;
+  font-size: 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #30DDD9;
+  border-radius: 4px;
+}

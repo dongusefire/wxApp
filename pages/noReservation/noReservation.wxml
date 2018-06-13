@@ -1,0 +1,21 @@
+<view>
+<view class="bi_o">
+  <view class="failed">
+    <!-- <view class="logo">
+       <image></image> 
+    </view> -->
+    <image src="../../images/u452.png"></image>
+    <view class="text">
+      预订失败
+    </view>
+  </view>
+   <view class="prompt">
+      <view class="label">温馨提示：</view>
+      <view class="content">尊敬的用户由于您一笔账单未结算，请结算后再预订，谢谢配合！</view>
+   </view>
+ </view>
+  <view class="settlement">
+    <view class="pay">去支付</view>
+    <view class="continue" bindtap="bindViewTap">继续预订</view>
+  </view>
+</view>

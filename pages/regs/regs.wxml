@@ -1,0 +1,34 @@
+<!--pages/regs/regs.wxml-->
+<view class="regs">
+  <form bindsubmit="formSubmit">
+      <view class="reg-container">
+        <view class='form'>
+            <view class="itemView">
+                <input class="input" type="number" name="username" value="{{userPhone}}" bindinput='setPhoneData' maxlength='11' id="userPhone" placeholder="请输入手机号码"/>
+            </view>
+            <view class="itemView code">
+                <input class="input" type="number" name="code" id="userCode" value="{{userCode}}" maxlength='4' placeholder="请输入手机验证码"/>
+                <button class="btn {{selected? 'phone_huo':''}}" bindtap="getCode">获取验证码</button>
+                <button class="btn count {{!selected? 'phone_huo':''}}">{{second}}s后重新获取</button>
+            </view>
+            <view class="itemView key">
+              <input class="input" type='text' name="password" id="userkey" value="{{pdd}}" password bindinput="setpsw" hidden="{{visible}}" placeholder="设置密码，6到20字符"/>
+              <input class="input" type='text'  value="{{pdd}}"  bindinput="setpsw" hidden="{{!visible}}" placeholder="设置密码，6到20字符"/>
+                <view class="key-img" bindtap='visibleness'>
+                    <image src="../../images/u774.png"></image>
+                </view>
+            </view>
+        </view>
+         <view class="joinus">
+            <checkbox-group name="agree" bindchange="checkboxChange">
+              <label class="checkbox">
+                <checkbox value="1" checked="{{checked}}"/><text>我已阅读并同意用户协议</text>
+              </label>
+            </checkbox-group>
+        </view>
+        <view class="loginbar">
+              <button formType="submit">完成注册</button>
+        </view>
+    </view>
+  </form>
+</view>

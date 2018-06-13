@@ -1,0 +1,27 @@
+/* pages/authorize/authorize.wxss */
+.item-auth{
+  width:100%;
+  height:100%;
+  position: relative;
+}
+.item-auth text{
+  position: absolute;
+  bottom:300rpx;
+  left:30rpx;
+  font-size:32rpx;
+  text-indent: 40rpx;
+  color:#363636;
+}
+.item-auth .btn-auth{
+   position:absolute;
+   bottom:100rpx;
+   left:10%;
+   width:80%;
+   background:#ff6600;
+   color:#ffffff;
+   font-size:36rpx;
+} 
+.bgI {
+  width:100%;
+  height:98%;
+}

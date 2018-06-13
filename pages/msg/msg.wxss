@@ -1,0 +1,27 @@
+.notice-content {
+  padding-top: 82rpx;
+  padding-bottom: 74rpx;
+  width: 100%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.notice-content image {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.notice-content .tip {
+  font-size: 36rpx;
+  color: #333333;
+
+  margin-top: 52rpx;
+}
+
+.notice-content .msg {
+  font-size: 32rpx;
+  color: #606060;
+
+  margin-top: 28rpx;
+  word-break: break-all;
+}
